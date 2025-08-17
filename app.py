@@ -30,6 +30,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 # Optional image conversion
 try:
     from PIL import Image
@@ -571,6 +572,11 @@ async def analyze_data(request: Request):
         form = await request.form()
         questions_file = None
         data_file = None
+
+        print("DEBUG: gemini_api_1 =", os.getenv("gemini_api_1"))
+        print("DEBUG: All keys =", [os.getenv(f"gemini_api_{i}") for i in range(1, 11)])
+
+
 
         for key, val in form.items():
             if hasattr(val, "filename") and val.filename:  # it's a file
