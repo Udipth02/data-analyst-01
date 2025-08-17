@@ -62,7 +62,12 @@ print("DEBUG: All keys =", [os.getenv(f"gemini_api_{i}") for i in range(1, 11)])
 # GEMINI_KEYS = [os.getenv(f"gemini_api_{i}") for i in range(1, 11)]
 # GEMINI_KEYS = [k for k in GEMINI_KEYS if k]
 
-GEMINI_KEYS = "AIzaSyCiJqFuV_8LidPrwQr8MAoJRS_5vowMNJQ"
+GEMINI_KEYS = [
+    "AIzaSyCiJqFuV_8LidPrwQr8MAoJRS_5vowMNJQ",
+    "AIzaSyCmUmsCsSvgCUtrb5XgBfoHh0jIjoRjHio",
+    "AIzaSyDYnMbANhhCbfdkWTVxK-JVLhJHKpGnX7Q",
+]
+
 MODEL_HIERARCHY = [
     "gemini-2.5-pro",
     "gemini-2.5-flash",
