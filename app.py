@@ -55,6 +55,9 @@ from collections import defaultdict
 import time
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+print("DEBUG: gemini_api_1 =", os.getenv("gemini_api_1"))
+print("DEBUG: All keys =", [os.getenv(f"gemini_api_{i}") for i in range(1, 11)])
+
 # Config
 GEMINI_KEYS = [os.getenv(f"gemini_api_{i}") for i in range(1, 11)]
 GEMINI_KEYS = [k for k in GEMINI_KEYS if k]
@@ -573,8 +576,6 @@ async def analyze_data(request: Request):
         questions_file = None
         data_file = None
 
-        print("DEBUG: gemini_api_1 =", os.getenv("gemini_api_1"))
-        print("DEBUG: All keys =", [os.getenv(f"gemini_api_{i}") for i in range(1, 11)])
 
 
 
